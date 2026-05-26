@@ -107,6 +107,7 @@
     </style>
 </head>
 <body>
+    <div id="app">
     <div class="container">
         <div class="heading">
             <h1>FIND<br>YOUR<br><span class="highlight">IDEAL GYM</span></h1>
@@ -128,13 +129,16 @@
         </div>
 
         <div class="buttons">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" onclick="window.location.href='register.html'">
                 GET STARTED <span class="arrow">→</span>
             </button>
-            <button class="btn btn-secondary">
+            <button class="btn btn-secondary" onclick="window.location.href='signin.html'">
                 SIGN IN <span class="arrow">→</span>
             </button>
         </div>
     </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

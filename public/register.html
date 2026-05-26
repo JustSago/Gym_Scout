@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Scout - Create Account</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 20px 20px;
+        }
+        .container {
+            max-width: 320px;
+            width: 100%;
+            background-color: #1a1a1a;
+            border-radius: 16px;
+            padding: 40px 30px;
+        }
+        .heading {
+            margin-bottom: 10px;
+        }
+        .heading h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .heading .highlight {
+            color: #c8ff00;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            font-size: 0.7rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .form-input-wrapper {
+            position: relative;
+        }
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: #666;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .form-input::placeholder {
+            color: #555;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #c8ff00;
+            color: white;
+        }
+        .password-toggle {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .password-toggle:hover {
+            color: #c8ff00;
+        }
+        .btn-register {
+            width: 100%;
+            padding: 14px 20px;
+            background-color: #c8ff00;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .btn-register:hover {
+            background-color: #b3e600;
+            transform: translateY(-2px);
+        }
+        .signin-link {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .signin-link a {
+            color: #c8ff00;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .signin-link a:hover {
+            color: #b3e600;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+    <div class="container">
+        <div class="heading">
+            <h1>CREATE<br><span class="highlight">ACCOUNT</span></h1>
+        </div>
+
+        <p class="subtitle">
+            Enter the kinetic zone. Your progression starts here.
+        </p>
+
+        <form>
+            <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-input" placeholder="SIMON MANEK">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="SIMONMANEK@EXAMPLE.COM">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="form-input-wrapper">
+                    <input type="password" class="form-input" id="password" placeholder="••••••••">
+                    <button type="button" class="password-toggle" onclick="togglePassword('password')">👁</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Confirm Password</label>
+                <div class="form-input-wrapper">
+                    <input type="password" class="form-input" id="confirmPassword" placeholder="••••••••">
+                    <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">👁</button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+        <div class="signin-link">
+            Already have an account? <a href="signin.html">Sign in</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+            } else {
+                input.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>
